@@ -81,13 +81,13 @@ const Header = () => {
     )
 
     const mobileBg = (
-        <div className="absolute left-0 -top-[200px] max-w-[100%] overflow-hidden h-[47.2rem] -z-0">
+        <div className="absolute left-0 -top-[200px] max-w-[100%] overflow-hidden h-[47.2rem] -z-0 rounded-bl-[100px]">
             <img className="relative min-w-max -left-[300px] -top-20" src="/images/bg-pattern-intro-mobile.svg"/>
         </div>
     )
 
     return (
-        <div className={`${isLaptop?'bg-gradient-to-r':' bg-gradient-to-b'} from-intro-left to-intro-right lg:px-44 mobile:px-7 pt-16 pb-10 rounded-bl-2xl`}>
+        <div className={`${isLaptop?'bg-gradient-to-r':' bg-gradient-to-b'} from-intro-left to-intro-right lg:px-44 mobile:px-7 pt-16 pb-10 rounded-bl-[100px] mb-28`}>
             <div className="relative z-20">
                 {isLaptop? laptopNav:mobileNav}
                 <div className={`flex flex-col items-center font-overpass text-white py-20 text-center ${isLaptop?'w-full':'max-w-[320px] m-auto'}`}>
