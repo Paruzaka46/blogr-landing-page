@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Header from './components/Header'
 import Content1 from './components/Content1'
+import Content2 from './components/Content2'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <div className='overflow-hidden'>
     <Header/>
     <Content1/>
+    <Content2/>
     </div>
   )
 }

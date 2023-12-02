@@ -17,7 +17,9 @@ export default {
         'vdg-blue': 'hsl(207, 13%, 34%)',
         'vd-black-blue': 'hsl(240, 10%, 16%)',
         'intro-left': 'hsl(13, 100%, 72%)',
-        'intro-right': 'hsl(353, 100%, 62%)'
+        'intro-right': 'hsl(353, 100%, 62%)',
+        'body-left': 'hsl(237, 17%, 21%)',
+        'body-right': 'hsl(237, 23%, 32%)'
       },
       fontFamily: {
         'overpass': ['Overpass', 'sans-serif'],
