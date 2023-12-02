@@ -5,6 +5,9 @@ const Header = () => {
     const isLaptop = useMediaQuery({query: '(min-width: 768px)'})
 
     const [openConnect, setOpenConnect] = useState(false)
+    const [openProduct, setOpenProduct] = useState(false)
+    const [openCompany, setOpenCompany] = useState(false)
+
     const [openBurger, setOpenBurger] = useState(false)
 
     const laptopNav = (
@@ -12,16 +15,29 @@ const Header = () => {
             <div className="flex items-center">
                 <input className="mr-16" type="image" src="/images/logo.svg"/>
                 <ul className="flex text-white font-ubuntu gap-8">
-                    <li className="flex items-center gap-1">
-                        <a className="hover:underline underline-offset-2" href="#">Product</a>
-                        <img src="/images/icon-arrow-light.svg"/>
-                    </li>
-                    <li className="flex items-center gap-1">
-                        <a className="hover:underline underline-offset-2" href="#">Company</a>
-                        <img src="/images/icon-arrow-light.svg"/>
+                    <li className="relative flex items-center gap-1">
+                        <a id="product" onClick={() => {setOpenProduct(!openProduct); setOpenCompany(false); setOpenConnect(false)}} className="hover:underline underline-offset-2" href="#">Product</a>
+                        <img className={openProduct && 'rotate-180'} src="/images/icon-arrow-light.svg"/>
+                        <ul className={`absolute bg-white text-black flex flex-col gap-3 w-[180px] rounded-md top-12 px-6 shadow-lg -left-6 ${openProduct?'h-[152] py-7':'h-0 py-0 overflow-hidden'} transition-all`}>
+                            <li><a className="hover:font-semibold" href="#">Overview</a></li>
+                            <li><a className="hover:font-semibold" href="#">Pricing</a></li>
+                            <li><a className="hover:font-semibold" href="#">Marketplace</a></li>
+                            <li><a className="hover:font-semibold" href="#">Features</a></li>
+                            <li><a className="hover:font-semibold" href="#">Integrations</a></li>
+                        </ul>
                     </li>
                     <li className="relative flex items-center gap-1">
-                        <a onClick={() => {setOpenConnect(!openConnect)}} className="hover:underline underline-offset-2" href="#">Connect</a>
+                        <a id="company" onClick={() => {setOpenCompany(!openCompany); setOpenProduct(false); setOpenConnect(false)}} className="hover:underline underline-offset-2" href="#">Company</a>
+                        <img className={openCompany && 'rotate-180'} src="/images/icon-arrow-light.svg"/>
+                        <ul className={`absolute bg-white text-black flex flex-col gap-3 w-[180px] rounded-md top-12 px-6 shadow-lg -left-6 ${openCompany?'h-[152] py-7':'h-0 py-0 overflow-hidden'} transition-all`}>
+                            <li><a className="hover:font-semibold" href="#">About</a></li>
+                            <li><a className="hover:font-semibold" href="#">Team</a></li>
+                            <li><a className="hover:font-semibold" href="#">Blog</a></li>
+                            <li><a className="hover:font-semibold" href="#">Career</a></li>
+                        </ul>
+                    </li>
+                    <li className="relative flex items-center gap-1">
+                        <a id="connect" onClick={() => {setOpenConnect(!openConnect); setOpenProduct(false); setOpenCompany(false)}} className="hover:underline underline-offset-2" href="#">Connect</a>
                         <img className={openConnect && 'rotate-180'} src="/images/icon-arrow-light.svg"/>
                         <ul className={`absolute bg-white text-black flex flex-col gap-3 w-[180px] rounded-md top-12 px-6 shadow-lg -left-6 ${openConnect?'h-[152] py-7':'h-0 py-0 overflow-hidden'} transition-all`}>
                             <li><a className="hover:font-semibold" href="#">Contact</a></li>
@@ -44,18 +60,35 @@ const Header = () => {
             <input type="image" src="images/logo.svg"/>
             <input onClick={() => {setOpenBurger(!openBurger)}} type="image" src={openBurger?'/images/icon-close.svg':'/images/icon-hamburger.svg'}/>
             <div className={`absolute bg-white rounded-md shadow-lg w-[100%] top-20  ${openBurger?'h-fit p-5':'h-0 py-0 overflow-hidden'} transition-all`}>
-                <ul className="flex flex-col items-center gap-4 text-vd-blue font-medium">
-                    <li className="flex items-center gap-1">
-                        <a className="hover:underline underline-offset-2" href="#">Product</a>
-                        <img src="/images/icon-arrow-dark.svg"/>
+                <ul className="flex flex-col items-center gap-2 text-vd-blue font-medium">
+                    <li className="flex flex-col items-center gap-1 w-full">
+                        <div className="flex items-center gap-1">
+                            <a onClick={() => {setOpenProduct(!openProduct); setOpenCompany(false); setOpenConnect(false)}} className="hover:underline underline-offset-2" href="#">Product</a>
+                            <img className={openProduct && 'rotate-180'} src="/images/icon-arrow-dark.svg"/>
+                        </div>
+                        <ul className={`bg-g-blue/30 text-center flex flex-col gap-3 w-[100%] rounded-md text-vdg-blue top-12 px-6 mt-3 -left-6 ${openProduct?'h-[152] py-5':'h-0 py-0 overflow-hidden'} transition-all`}>
+                            <li><a className="hover:font-semibold" href="#">Overview</a></li>
+                            <li><a className="hover:font-semibold" href="#">Pricing</a></li>
+                            <li><a className="hover:font-semibold" href="#">Marketplace</a></li>
+                            <li><a className="hover:font-semibold" href="#">Features</a></li>
+                            <li><a className="hover:font-semibold" href="#">Integrations</a></li>
+                        </ul>
                     </li>
-                    <li className="flex items-center gap-1">
-                        <a className="hover:underline underline-offset-2" href="#">Company</a>
-                        <img src="/images/icon-arrow-dark.svg"/>
+                    <li className="flex flex-col items-center gap-1 w-full">
+                        <div className="flex items-center gap-1">
+                            <a onClick={() => {setOpenCompany(!openCompany); setOpenProduct(false); setOpenConnect(false)}} className="hover:underline underline-offset-2" href="#">Company</a>
+                            <img className={openCompany && 'rotate-180'} src="/images/icon-arrow-dark.svg"/>
+                        </div>
+                        <ul className={`bg-g-blue/30 text-center flex flex-col gap-3 w-[100%] rounded-md text-vdg-blue top-12 px-6 mt-3 -left-6 ${openCompany?'h-[152] py-5':'h-0 py-0 overflow-hidden'} transition-all`}>
+                            <li><a className="hover:font-semibold" href="#">About</a></li>
+                            <li><a className="hover:font-semibold" href="#">Team</a></li>
+                            <li><a className="hover:font-semibold" href="#">Blog</a></li>
+                            <li><a className="hover:font-semibold" href="#">Career</a></li>
+                        </ul>
                     </li>
                     <li className="flex flex-col items-center gap-1 w-[100%]">
                         <div className="flex items-center gap-1">
-                            <a onClick={() => {setOpenConnect(!openConnect)}} className="hover:underline underline-offset-2" href="#">Connect</a>
+                            <a onClick={() => {setOpenConnect(!openConnect); setOpenProduct(false); setOpenCompany(false)}} className="hover:underline underline-offset-2" href="#">Connect</a>
                             <img className={openConnect && 'rotate-180'} src="/images/icon-arrow-dark.svg"/>
                         </div>
                         <ul className={`bg-g-blue/30 text-center flex flex-col gap-3 w-[100%] rounded-md text-vdg-blue top-12 px-6 mt-3 -left-6 ${openConnect?'h-[152] py-5':'h-0 py-0 overflow-hidden'} transition-all`}>

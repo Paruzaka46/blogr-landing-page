@@ -5,7 +5,7 @@ const Content1 = () => {
     const isLaptop = useMediaQuery({query: '(min-width: 768px)'})
 
     return (
-        <div className="text-center font-overpass mb-44">
+        <div className="text-center font-overpass md:mb-44 mobile:mb-28">
             <h2 className="text-[30px] m-auto md:mb-20 mobile:mb-10 font-bold text-vd-blue">Designed for the future</h2>
             <div className="md:grid md:grid-cols-2 mobile:flex mobile:flex-col-reverse justify-center items-center">
                 <div className="text-start md:pl-44 mobile:pl-0 pb-20 ">
