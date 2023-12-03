@@ -16,15 +16,6 @@ const Content2 = () => {
     This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
                 </div>
             </div>
-            {/* <div className="relative">
-                <img className="relative -top-[4rem] left-20 scale-[80%]" src="/images/illustration-phones.svg"/>
-            </div>
-
-            <div className="">
-                <h2 className="text-[35px] font-bold mb-3">State of the Art Infrastructure</h2>
-                <p className="w-[30rem]">With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity. 
-  This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.</p>
-            </div> */}
         </div>
     )
 }

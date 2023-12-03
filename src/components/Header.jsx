@@ -130,13 +130,9 @@ const Header = () => {
                         <button className="text-l-red bg-white h-12 w-32 rounded-full hover:text-white hover:bg-white/30 transition-all">Start for Free</button>
                         <button className="text-white bg-none border-solid border-2 border-white h-12 w-32 rounded-full hover:text-l-red hover:bg-white transition-all">Learn More</button>
                     </div>
-                {/* <img className="absolute resize-none -z-10 -top-[120%] left-[30%] scale-[180%]" src="/images/bg-pattern-intro-desktop.svg"/> */}
                 </div>
             </div>
             {isLaptop?laptopBg:mobileBg}
-                {/* <div className="absolute left-0 -top-[200px] max-w-[100%] overflow-hidden h-[43rem] -z-0">
-                    <img className="relative min-w-max -left-[400px] -top-[1100px]" src="/images/bg-pattern-intro-desktop.svg"/>
-                </div> */}
         </div>
     )
 }

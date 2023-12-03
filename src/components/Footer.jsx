@@ -34,35 +34,6 @@ const Footer = () => {
                     </div>
                 )
             })}
-            {/* <div>
-                <h3 className="mb-5">Product</h3>
-                <ul className="flex flex-col gap-2">
-                    <li className=" hover:underline underline-offset-2"><a href="#">Overview</a></li>
-                    <li className=" hover:underline underline-offset-2"><a href="#">Pricing</a></li>
-                    <li className=" hover:underline underline-offset-2"><a href="#">Marketplace</a></li>
-                    <li className=" hover:underline underline-offset-2"><a href="#">Features</a></li>
-                    <li className=" hover:underline underline-offset-2"><a href="#">Integrations</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Team</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Career</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h3>Connect</h3>
-                <ul>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                    <li><a href="#">LinkedIn</a></li>
-                </ul>
-            </div> */}
         </div>
     )
 }

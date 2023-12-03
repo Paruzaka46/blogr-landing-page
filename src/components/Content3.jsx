@@ -26,10 +26,6 @@ const Content3 = () => {
   capable of producing even the most complicated sites.
                     </p>
                 </div>
-
-                {/* <div className="relative">
-                    <img className={isLaptop && 'absolute -top-[400px] max-w-[800px] xl:left-44 md:left-24'} src={isLaptop?'/images/illustration-editor-desktop.svg':'/images/illustration-editor-mobile.svg'}/>
-                </div> */}
             </div>
         </div>
     )
